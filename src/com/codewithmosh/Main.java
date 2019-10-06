@@ -1,16 +1,31 @@
 package com.codewithmosh;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
+import java.util.Stack;
+
 public class Main {
 
     public static void main(String[] args) {
-        Stack stack = new Stack();
+        Queue<Integer> queue = new ArrayDeque<>();
 
-        stack.push(10);
-        stack.push(20);
-        stack.push(30);
-        stack.pop();
+        queue.add(10);
+        queue.add(20);
+        queue.add(30);
+        System.out.println(queue);
 
-        System.out.println(stack);
-        System.out.println(stack.peek());
+        reverse(queue);
+        System.out.println(queue);
+    }
+
+    public static void reverse(Queue<Integer> queue) {
+        Stack<Integer> stack = new Stack<>();
+        while(!queue.isEmpty()) {
+            stack.push(queue.remove());
+        }
+
+        while (!stack.isEmpty()) {
+            queue.add(stack.pop());
+        }
     }
 }
