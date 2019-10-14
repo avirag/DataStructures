@@ -3,12 +3,14 @@ package com.codewithmosh;
 public class Main {
 
     public static void main(String[] args) {
-        HashTable table = new HashTable();
-        table.put(6, "A");
-        table.put(8, "B");
-        table.put(11, "C");
-        table.put(6, "A+");
-        table.remove(6);
-        System.out.println(table.get(11));
+        Tree tree = new Tree();
+        tree.insert(7);
+        tree.insert(4);
+        tree.insert(9);
+        tree.insert(1);
+        tree.insert(6);
+        tree.insert(8);
+        tree.insert(10);
+        System.out.println("Done");
     }
 }
